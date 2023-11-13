@@ -1,6 +1,7 @@
 import React from 'react';
-
-interface Investment {
+import InvestmentList from './InvestmentList';
+import './App.css'
+export interface Investment {
   Scrip: string;
   Quantity: number;
   Price: number;
@@ -74,4 +75,14 @@ const data: Investment[] = [
   }
 ];
 
+function UI() {
+  return (
+    <div>
+      <h1>Your App</h1>
+      <InvestmentList investment={data} />
+     
+    </div>
+  );
+}
 
+export default UI;
