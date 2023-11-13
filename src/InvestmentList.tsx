@@ -1,7 +1,6 @@
-import React from 'react';
-import { Investment } from './UI';
-import InvestmentItem from './InvestmentItem';
-import './InvestmentList.css'
+import { Investment } from "./UI";
+import InvestmentItem from "./InvestmentItem";
+// import "./InvestmentList.css";
 function InvestmentList(props: { investment: Investment[] }) {
   return (
     <div>

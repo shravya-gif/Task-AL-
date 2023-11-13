@@ -1,6 +1,6 @@
 import React from 'react';
 import InvestmentList from './InvestmentList';
-import './App.css'
+// import './App.css'
 export interface Investment {
   Scrip: string;
   Quantity: number;
