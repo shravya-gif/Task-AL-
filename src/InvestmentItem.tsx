@@ -18,7 +18,7 @@ function InvestmentItem(props: { investment: Investment }) {
   } = props.investment;
 
   return (
-    <div className="flex items-center gap-5 flex-col sm:flex-col lg:flex-row">
+    <div className="flex items-center gap-5 flex-col sm:flex-col lg:flex-row border m-5">
       <GiHamburgerMenu size={24} color="#333" />
 
       <div className="flex flex-col w-20 ">
@@ -43,7 +43,7 @@ function InvestmentItem(props: { investment: Investment }) {
           <h1>{Quantity}</h1>
         </div>
         <div className="flex gap-0">
-          <h1 className="h-10 w-10">@</h1>
+          <h1 className="h-10 w-10 -mb-4">@</h1>
           <h1>Avg Cost</h1>
           <div className="flex-1"></div>
           <h1>{`$${Cost}`}</h1>
@@ -120,11 +120,12 @@ function InvestmentItem(props: { investment: Investment }) {
         </div>
       </div>
       {/* Buy and sell */}
-      <div className="flex flex-col sm:flex-row md:flex-col lg:flex-col">
-        <button className="flex-1 bg-white border-2 border-orange-500 text-black py-2 px-4 rounded transition duration-300 mb-2 sm:mb-0 sm:mr-2 hover:bg-orange-500 hover:text-white">
+      <div className="flex flex-col sm:flex-row md:flex-row lg:flex-col sm:gap-2 ">
+        <button className="bg-white border-2 border-orange-500 text-black py-2 px-4 rounded transition duration-300 mb-2 hover:bg-orange-500 hover:text-white">
           Buy
         </button>
-        <button className="flex-1 bg-white border-2 border-orange-500 text-black py-2 px-4 rounded transition duration-300 hover:bg-orange-500 hover:text-white">
+
+        <button className="bg-white border-2 border-orange-500 mb-3 text-black py-2 px-4 rounded transition duration-300 hover:bg-orange-500 hover:text-white">
           Sell
         </button>
       </div>
