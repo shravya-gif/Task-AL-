@@ -70,7 +70,7 @@ const data: Investment[] = [
     Cost: 25.40,
     Amount: 8509.00,
     Value: 10.46,
-    PnL: "null",
+    PnL: 0.00,
     Return: 0.00
   }
 ];

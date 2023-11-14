@@ -33,7 +33,7 @@ function InvestmentItem(props: { investment: Investment }) {
         <div>{"<Image>"}</div>
 
         {/* Investment details */}
-        <div className="flex flex-col w-60">
+        <div className="flex flex-col w-72">
           <div className="flex gap-8">
             <BsBox2Fill size={20} color="#333"></BsBox2Fill>
             <h1>Quantity</h1>
@@ -41,13 +41,13 @@ function InvestmentItem(props: { investment: Investment }) {
             <h1>{Quantity}</h1>
           </div>
           <div className="flex gap-8">
-            <h1>@</h1>
+            <h1 className="h-10 w-10">@</h1>
             <h1>Avg Cost</h1>
             <div className="flex-1"></div>
             <h1>{Cost}</h1>
           </div>
           <div className="flex gap-8">
-            <AiFillCreditCard />
+            <AiFillCreditCard size={24} />
             <h1>Invested Amt</h1>
             <div className="flex-1"></div>
             <h1>{Amount}</h1>
@@ -95,23 +95,26 @@ function InvestmentItem(props: { investment: Investment }) {
               <BarIndicator
                 min={0}
                 max={100}
-                val={Math.min(props.investment.Return,0)}
+                val={Math.abs(Math.min(props.investment.Return, 0))}
                 alignRight={true}
                 containerStyle={{
                   width: "50%",
+                  
                 }}
                 barStyle={{
                   backgroundColor: "red",
+                  
                 }}
               />
               |
               <BarIndicator
                 min={0}
                 max={100}
-                val={Math.max(props.investment.Return,0)}
+                val={Math.max(props.investment.Return, 0)}
                 alignRight={false}
                 containerStyle={{
                   width: "50%",
+                  
                 }}
               />
             </div>
@@ -119,8 +122,13 @@ function InvestmentItem(props: { investment: Investment }) {
         </div>
         {/* Buy and sell */}
         <div className="flex flex-col">
-          <button>Buy</button>
-          <button>Sell</button>
+          <button className="bg-white border-2 border-orange-500 text-black py-2 px-4 rounded transition duration-300 mb-2 hover:bg-orange-500 hover:text-white">
+            Buy
+          </button>
+
+          <button className="bg-white border-2 border-orange-500 mb-3 text-black py-2 px-4 rounded transition duration-300 hover:bg-orange-500 hover:text-white">
+            Sell
+          </button>
         </div>
       </div>
     </main>

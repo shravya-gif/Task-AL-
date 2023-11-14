@@ -12,7 +12,7 @@ export function BarIndicator(props: {
     const width = ((val - min) / (max - min)) * 100; // Calculate the width as a percentage
   
     return (
-      <div className="rounded-sm bg-gray-100 w-56" style={props.containerStyle}>
+      <div className="rounded-sm bg-gray-200 w-56" style={props.containerStyle}>
         <div className="relative h-6">
           <div
             className={`bg-green-500 h-full absolute ${
