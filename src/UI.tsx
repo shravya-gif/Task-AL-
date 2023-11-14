@@ -8,7 +8,7 @@ export interface Investment {
   Cost: number;
   Amount: number;
   Value: number;
-  PnL: number | null;
+  PnL: string|number | null;
   Return: number;
 }
 
@@ -70,7 +70,7 @@ const data: Investment[] = [
     Cost: 25.40,
     Amount: 8509.00,
     Value: 10.46,
-    PnL: null,
+    PnL: "null",
     Return: 0.00
   }
 ];
