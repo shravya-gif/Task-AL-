@@ -18,7 +18,7 @@ function InvestmentItem(props: { investment: Investment }) {
   } = props.investment;
 
   return (
-    <div className="flex items-center gap-5 flex-col sm:flex-col lg:flex-row  border m-5">
+    <div className="flex items-center gap-5 flex-col  sm:flex-col lg:flex-row p-5 border m-5">
       <GiHamburgerMenu size={24} color="#333" />
 
       <div className="flex flex-col w-20 ">
