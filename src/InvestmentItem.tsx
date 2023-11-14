@@ -4,7 +4,7 @@ import { BsBox2Fill } from "react-icons/bs";
 import { AiFillCreditCard } from "react-icons/ai";
 import { BarIndicator } from "./BarIndicator";
 import MarketValue from "./MarketValue";
-import DonutChart from "react-donut-chart";
+import logoImage from './Images/IShares_by_BlackRock_Logo.png';
 function InvestmentItem(props: { investment: Investment }) {
   const {
     Scrip,
@@ -19,9 +19,9 @@ function InvestmentItem(props: { investment: Investment }) {
 
   return (
     <div className="flex items-center gap-5">
-      <GiHamburgerMenu size={24} color="#333" />
+      <GiHamburgerMenu size={24} color="#333"  />
 
-      <div className="flex flex-col w-20">
+      <div className="flex flex-col w-20 ">
         <h1>{Scrip}</h1>
         <h1 className="text-2xl text-sky-600 font-bold">
           <span className="text-black">$</span>
@@ -30,7 +30,7 @@ function InvestmentItem(props: { investment: Investment }) {
       </div>
 
       {/* Image  */}
-      <div>{"<Image>"}</div>
+      <div><img src={logoImage} alt="Logo" className="h-5 w-15"/></div>
 
       {/* Investment details */}
       <div className="flex flex-col w-80">
@@ -127,7 +127,7 @@ function InvestmentItem(props: { investment: Investment }) {
           Sell
         </button>
       </div>
-      
+     
     </div>
   );
 }
