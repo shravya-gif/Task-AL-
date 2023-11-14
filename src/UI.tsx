@@ -78,7 +78,6 @@ const data: Investment[] = [
 function UI() {
   return (
     <div>
-      <h1>Your App</h1>
       <InvestmentList investment={data} />
     </div>
   );
