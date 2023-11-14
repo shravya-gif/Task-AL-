@@ -5,9 +5,9 @@ import DonutChart from "./Chart";
 function InvestmentList(props: { investment: Investment[] }) {
   return (
     <div className="flex flex-row ">
-    <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row">
+    <div className="flex flex-col ">
    
-      <h2 className="sm:flex-col md:flex-row lg:flex-row">Investment List</h2>
+      <h2>Investment List</h2>
       {props.investment.map((item, index) => (
         <InvestmentItem key={index} investment={item} />
         
